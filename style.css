@@ -21,7 +21,7 @@ body {
 .equation {
   text-align: center;
   color: #000000;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 @media (max-height: 500px) {
@@ -31,7 +31,7 @@ body {
 }
 
 input {
-  margin-top: 40px;
+  margin-top: 10px;
   padding: 4px;
   border-radius: 5px;
   width: 100px
@@ -47,7 +47,17 @@ button {
 .roots {
   color: #000000;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
   font-size: 50px;
 }
 
+.extra {
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.page-image {
+  width: 250px;
+}
