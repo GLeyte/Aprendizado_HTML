@@ -5,11 +5,17 @@ function Calcular() {
   var x1 = document.getElementById("X1")
   var x2 = document.getElementById("X2")
 
-  if(a!=0){
-    x1.innerHTML = (-b+Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a)
-    x2.innerHTML = (-b-Math.sqrt(Math.pow(b,2)-4*a*c))/(2*a)
-  } else {
+  var delta = Math.pow(b,2)-4*a*c
+  var imag = (Math.sqrt(-delta)/(2*a)).toFixed(3)
+
+  if(a==0){
     x1.innerHTML = -c/b
     x2.innerHTML = "Não existe"
+  } else if (delta < 0){
+    x1.innerHTML = (-b/(2*a)).toFixed(3) + "   " + imag + "i"
+    x2.innerHTML = (-b/(2*a)).toFixed(3) + "   " + -imag + "i"
+  } else {
+    x1.innerHTML = ((-b+Math.sqrt(delta))/(2*a)).toFixed(3)
+    x2.innerHTML = ((-b-Math.sqrt(delta))/(2*a)).toFixed(3)
   }
 }
