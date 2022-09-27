@@ -46,7 +46,7 @@
     
   <div class="col-md-6 offset-md-3">
     <div class="input-group">
-      <span class="input-group-btn">
+      <span class="input-group-btn mr-1">
         <button class="btn btn-secondary" type="button" onclick="adicionaJogador()" id="novoJogador">Inserir</button>
       </span>
       <input type="text" class="form-control" placeholder="Nome do novo jogador" id="Nome" onkeydown="return /[a-z]/i.test(event.key)">
@@ -54,21 +54,24 @@
   </div>
   <br>
   <div class="row justify-content-md-center">
-    <div class="col-md-7">
-      <div class="input-group">
-        <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button" onclick="adicionaPartida()">Inserir</button>
-        </span>
-        <select class="form-control from" aria-label="Default select example" id="jogador1">
+    <div class="col-md-6">
+      <div class="input-group m-1">
+        <select class="form-control from mr-1" aria-label="Default select example" id="jogador1">
+          <option value="" disabled selected>Selecione o jogador 1</option>
         </select>
         <!-- <input type="text" class="form-control" placeholder="Jogador 1" id="jogador1" onkeydown="return /[a-z]/i.test(event.key)"> -->
         <input type="number" class="form-control" placeholder="Pontuação 1" id="placar1">
-        <input type="number" class="form-control" placeholder="Pontuação 2" id="placar2">
         <!-- <input type="text" class="form-control" placeholder="Jogador 2" id="jogador2" onkeydown="return /[a-z]/i.test(event.key)"> -->
-
-        <select class="form-control to" aria-label="Default select example" id="jogador2">
-        </select>
       </div>
+      <div class="input-group m-1">
+        <select class="form-control to mr-1" placeholder="Jogadores" aria-label="Default select example" id="jogador2">
+          <option value="" disabled selected>Selecione o jogador 2</option>
+        </select>
+        <input type="number" class="form-control" placeholder="Pontuação 2" id="placar2">
+      </div>
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" onclick="adicionaPartida()">Inserir</button>
+      </span>
     </div>
   </div>
 
